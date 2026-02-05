@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Data Architecture in Practice:
+    What's Actually Working in 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Banner Images -->
+  <div class="max-w-5xl mx-auto mt-6">
+    <img src="assets/images/image67a.png" alt="Simpplr Banner" class="w-full">
+  </div>
+  <div class="max-w-5xl mx-auto mt-6">
+    <img src="assets/images/image67b.png" alt="Webinar Banner" class="w-full">
+  </div>
+
+  <!-- Title + Register -->
+  <div class="max-w-5xl mx-auto mt-12 text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 leading-snug mb-8">
+      Modern Data Architecture in Practice:
+      What's Actually Working in 2026
+    </h1>
+    <button id="registerBtn"
+      class="mb-12 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded font-semibold shadow">
+      REGISTER NOW
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-5xl mx-auto text-gray-800 space-y-4 px-4">
+    <p>
+      As organizations scale their AI and analytics efforts, data architecture has become ever more
+      critical to success. Data teams are being asked to deliver faster insights, stronger governance,
+      and AI-ready data, all while keeping costs and complexity in check.
+    </p>
+
+    <p>As a result, many are rethinking how they modernize legacy data warehouses, manage hybrid
+      and cloud platforms, improve data engineering productivity, and build reliable foundations for
+      semantic layers and analytics that support better, more robust decision-making.
+    </p>
+
+    <p>To cut through the hype and share what is actually working in modern data environments
+      today, DBTA is bringing together industry experts for a special roundtable webinar on
+      February 17th.</p>
+
+    <p class="font-semibold">Join this interactive discussion to explore:</p>
+
+    <ul class="list-disc list-inside space-y-2">
+      <li>Scalable, governed data architectures for analytics and AI</li>
+      <li>How teams are unifying data engineering, governance, and AI across hybrid and cloud
+        environments</li>
+      <li>Modern architectural patterns, including lakehouse, data products, and semantic layer</li>
+      <li>Practical lessons from deployments and modernization initiatives</li>
+      <li>Best practices for reliability, cost efficiency, and performance at scale</li>
+    </ul>
+    <p class="font-semibold">Reserve your seat today!</p>
+
+    <p>
+      <span id="registerText" class="text-red-600 font-bold cursor-pointer hover:underline">REGISTER NOW</span>
+      to attend the webinar <span class="font-semibold">Modern Data Architecture in Practice: What's Actually
+        Working in 2026.
+      </span> Don't miss this live event on <span class="font-semibold">Tuesday, February 17, 11 AM PT / 2 PM ET</span>
+    </p>
+
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="mt-12"></div>
+  <!-- JS -->
+  <script>
+    // Load navbar and footer
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Register actions
+    function goRegister() {
+      window.open('register.html', '_blank');
+    }
+
+    document.getElementById('registerBtn').addEventListener('click', goRegister);
+    document.getElementById('registerText').addEventListener('click', goRegister);
+  </script>
+
+</body>
+
+</html>
